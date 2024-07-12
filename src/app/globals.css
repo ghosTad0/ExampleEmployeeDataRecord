@@ -1,6 +1,6 @@
 :root {
   --max-width: 1100px;
-  --border-radius: 12px;
+  --border-radius: 2px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
@@ -38,6 +38,9 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+
+  --my-border-color: #0E5119;
+  --my-hover-bg-color: #CAEFD0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -104,4 +107,89 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+.AppTitle {
+  color: rgb(140, 141, 138);
+  font-size: 5rem;
+}
+
+.empPageHead0 {
+  text-align: center;
+  color: rgb(191, 207, 191);
+  padding: 2rem 4rem;
+  font-size: 2rem;
+}
+
+.employeeForm {
+  color: rgb(191, 207, 191);
+  font-size: 2rem;
+}
+
+.empPageContentSpace {
+  margin: 5vh 25vw;
+}
+
+/* .empPageContentSpace :hover{
+  background-color: rgb(8, 8, 8);
+} */
+
+.empPageContent1 {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+
+.navBar {
+  /* position: absolute; */
+  font-size: 1rem;
+  display: flex;
+  flex-direction: horizontal;
+  justify-content: left;
+  width: 100vw;
+  border-color: var(--my-border-color);
+  border-style: dashed;
+}
+
+.navBar > div {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: rgb(8, 8, 8);
+  border-color: var(--my-border-color);
+  border-style: groove;
+  border-radius: 0.4rem;
+}
+
+.navBar > div :hover{
+  color: #6BBA78;
+}
+
+.inputField {
+  font-size: 1.3rem;
+}
+
+.inputContainer {
+  margin: 1rem
+}
+
+.inputField:focus {
+  outline: none;
+  border-color: var(--my-border-color); /* Desired color for the outline */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Optional: Add a box shadow for focus */
+}
+
+.employeeCard {
+  font-size: 2.5rem;
+  padding: 0.6rem 0.6rem;
+  margin: 0.6rem 0.6rem;
+  background-color: rgb(20, 20, 20);
+  border-radius: 1rem;
+  border-style: solid;
+  border-color: var(--my-border-color);
+}
+
+.employeeCard:hover {
+  background-color: var(--my-hover-bg-color);
+  color: black;
+  border-radius: 0.8rem;
+  box-decoration-break: clone;
 }
