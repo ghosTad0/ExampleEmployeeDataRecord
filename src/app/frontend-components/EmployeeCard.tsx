@@ -13,7 +13,7 @@ export default function EmployeeCard(props: any){
     return (
         <div onClick={navToEmployeeDetails}>
             <div className="employeeCard">
-                <p>  {props.employeeName}</p>
+                <p>{props.employeeName}</p>
             </div>
         </div>
     )

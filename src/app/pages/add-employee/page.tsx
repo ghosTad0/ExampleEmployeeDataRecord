@@ -6,7 +6,7 @@ export default function page(){
             <div className="empPageHead0">
                 <h1>Add Employee</h1>
             </div>
-            <div className="empPageContentSpace">
+            <div className="empPageContentSpace empPageContentSpaceAdd">
                 <div className="empPageContent1">
                     <AddEmployeeform />
                 </div>

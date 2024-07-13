@@ -40,7 +40,9 @@
   --card-border-rgb: 131, 134, 135;
 
   --my-border-color: #0E5119;
-  --my-hover-bg-color: #CAEFD0;
+  --my-hover-bg-color: #6BA432;
+  --my-fields-fc1: rgb(191, 207, 191);
+  --my-fields-fc2: #288B2C;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -130,6 +132,11 @@ a {
   margin: 5vh 25vw;
 }
 
+.empPageContentSpaceAdd {
+  border-style: solid;
+  border-color: var(--my-border-color);
+}
+
 /* .empPageContentSpace :hover{
   background-color: rgb(8, 8, 8);
 } */
@@ -146,17 +153,17 @@ a {
   flex-direction: horizontal;
   justify-content: left;
   width: 100vw;
-  border-color: var(--my-border-color);
-  border-style: dashed;
+  /* border-color: var(--my-border-color);
+  border-style: dashed; */
 }
 
 .navBar > div {
   margin: 1rem;
   padding: 1rem;
   background-color: rgb(8, 8, 8);
-  border-color: var(--my-border-color);
+  /* border-color: var(--my-border-color);
   border-style: groove;
-  border-radius: 0.4rem;
+  border-radius: 0.4rem; */
 }
 
 .navBar > div :hover{
@@ -165,10 +172,39 @@ a {
 
 .inputField {
   font-size: 1.3rem;
+  border-color: #146240;
 }
+
+
+input[type="text"], textarea {
+  background-color : black; 
+}
+
 
 .inputContainer {
   margin: 1rem
+}
+
+.empAddButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0rem 1rem;
+}
+
+.empAddButton > button {
+  flex: 1
+}
+
+.empAddSeparation1 {
+  height: 5vh;
+}
+
+.empAddButton button {
+  font-size: 2rem;
+  background-color: #50C878;
+  border-color: #146240;
+  color: black;
 }
 
 .inputField:focus {
@@ -180,16 +216,35 @@ a {
 .employeeCard {
   font-size: 2.5rem;
   padding: 0.6rem 0.6rem;
-  margin: 0.6rem 0.6rem;
-  background-color: rgb(20, 20, 20);
+  margin: 0.8rem 0.8rem;
+  text-indent: 2vw;
+  background-color: black;
   border-radius: 1rem;
   border-style: solid;
   border-color: var(--my-border-color);
 }
 
 .employeeCard:hover {
-  background-color: var(--my-hover-bg-color);
+  /* background-color: var(--my-hover-bg-color); */
+  background-image: linear-gradient(to bottom right, green, white, green);
   color: black;
   border-radius: 0.8rem;
   box-decoration-break: clone;
+}
+
+
+.empDetailsTitle {
+  color: var(--my-fields-fc2);
+  font-style: italic;
+  font-size: 1.3rem;
+}
+
+.empDetailsContent {
+  text-indent: 4rem;
+  color: var(--my-fields-fc1);
+  font-size: 2.5rem;
+}
+
+.empDetailsSpace1 {
+  height: 5vh;
 }
