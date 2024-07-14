@@ -153,6 +153,10 @@ a {
   flex-direction: horizontal;
   justify-content: left;
   width: 100vw;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
   /* border-color: var(--my-border-color);
   border-style: dashed; */
 }
@@ -164,6 +168,10 @@ a {
   /* border-color: var(--my-border-color);
   border-style: groove;
   border-radius: 0.4rem; */
+}
+
+.postNvBrSpace {
+  height: 10vh;
 }
 
 .navBar > div :hover{

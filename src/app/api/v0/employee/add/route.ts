@@ -26,7 +26,7 @@ export async function POST(
         })
     } catch (e) {
         console.log(e)
-        return NextResponse.json({errMsg: `error occured-  ${e}`}, {status: 500})
+        return  new Response(JSON.stringify({errMsg: `error occured-  ${e}`}), {status: 500})
     }
     console.log(validatedEmpData)
     return NextResponse.json({status: "ok"}, {status: 201})

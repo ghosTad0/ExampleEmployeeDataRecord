@@ -15,6 +15,8 @@ export default function PagesLayout({
     return (
         <>
             <NavBar />
+            <div className="postNvBrSpace">
+            </div>
             <section>
                 {children}
             </section>
