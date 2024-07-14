@@ -11,10 +11,14 @@ export default function EmployeeCard(props: any){
     }
 
     return (
-        <div onClick={navToEmployeeDetails}>
-            <div className="employeeCard">
-                <p>{props.employeeName}</p>
+        <>
+            <div onClick={navToEmployeeDetails}>
+                <div className="employeeCard">
+                    <p>{props.employeeName}</p>
+                </div>
             </div>
-        </div>
+            <p className="employeeDelete">Delete</p>
+        </>
+
     )
 }

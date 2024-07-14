@@ -177,7 +177,9 @@ a {
 
 
 input[type="text"], textarea {
-  background-color : black; 
+  background-color : black;
+  padding: 0.6rem;
+  border-radius: 0.4rem;
 }
 
 
@@ -225,11 +227,18 @@ input[type="text"], textarea {
 }
 
 .employeeCard:hover {
-  /* background-color: var(--my-hover-bg-color); */
   background-image: linear-gradient(to bottom right, green, white, green);
   color: black;
   border-radius: 0.8rem;
   box-decoration-break: clone;
+}
+
+.employeeCard:hover + .employeeDelete {
+  display: block;
+}                 /*  why this isnt workinggggg!! */
+
+.employeeDelete {
+  display: none;
 }
 
 

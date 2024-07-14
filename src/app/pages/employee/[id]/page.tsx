@@ -1,3 +1,5 @@
+"use client"
+
 export default function Page({ params }: { params: { id: string } }) {
 
     function getEmployeeById(){
@@ -26,7 +28,7 @@ export default function Page({ params }: { params: { id: string } }) {
                         <div className="empDetailsSpace1">
                         </div>
                         <div className="empDetailsTitle">
-                            <p>FullName:</p>
+                            <p>Name:</p>
                         </div>
                         <div className="empDetailsContent">
                             <p>tad</p>
@@ -53,6 +55,16 @@ export default function Page({ params }: { params: { id: string } }) {
                         </div>
                         <hr />
 
+                    </div>
+                    <div className="empDetailsSpace1">
+                    </div>
+                    <div>
+                        <button 
+                            style={{backgroundColor: "black", borderColor: "green", color: "yellow", padding: "0.7rem", fontSize: "1rem", borderRadius: "0.5rem"}}
+                            onClick={() => console.log("97")}
+                        >
+                            Delete
+                        </button>
                     </div>
                 </div>
             </div>
