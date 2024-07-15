@@ -6,7 +6,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 
 export default function page(){
-    const [employeesData, setEmployeesData] = useState<employee []>([])
+    const [employeesData, setEmployeesData] = useState<{id: number, employee_name: string} []>([])
 
     async function fetchEmployeeData(){
         const respSendEmpData = await fetch("/api/v0/employee/list", {
