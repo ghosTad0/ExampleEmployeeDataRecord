@@ -6,7 +6,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 
 export default function page(){
-    const [employeesData, setEmployeesData] = useState<{id: number, employee_name: string} []>([])
+    const [employeesData, setEmployeesData] = useState<{id: number, employee_name: string} [] | null>([])
 
     async function fetchEmployeeData(){
         const respSendEmpData = await fetch("/api/v0/employee/list", {
@@ -20,6 +20,7 @@ export default function page(){
             setEmployeesData(respSendEmpDataBody)
             return
         }
+        setEmployeesData(null)
         return
     }
 
@@ -34,16 +35,22 @@ export default function page(){
             </div>
             <div className="empPageContentSpace">
                 <div className="empPageContent1">
-                    {employeesData.length? (
+                    {employeesData? (
                         <>
-                        {employeesData.map((emp, index) => 
-                            <React.Fragment key={index}>
-                                <EmployeeCard employeeName={emp.employee_name} employeeId={emp.id} />
-                            </React.Fragment>
-                        )}
+                            {employeesData.length? (
+                                <>
+                                {employeesData.map((emp, index) => 
+                                    <React.Fragment key={index}>
+                                        <EmployeeCard employeeName={emp.employee_name} employeeId={emp.id} />
+                                    </React.Fragment>
+                                )}
+                                </>
+                            ):(
+                                <p>Employee records haven't been added yet.</p>
+                            )}
                         </>
                     ):(
-                        <p>Loading...</p>
+                        <p>Unable to fetch employee records!</p>
                     )}
                 </div>
             </div>
