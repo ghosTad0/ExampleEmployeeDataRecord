@@ -29,7 +29,9 @@ export default function Page({ params }: { params: { id: string } }) {
             }
         })
         if (deleteEmpRes.status === 204){
-            router.push("/pages/list-employees")
+            const redirectedAt = new Date()
+            const redirectParams = new URLSearchParams({redirectedAt: `${redirectedAt.getTime()}`, redirectedAfter: 'deleted'}).toString()
+            router.push(`/pages/list-employees?${redirectParams}`)
             return
         }
         const delResMsg = await deleteEmpRes.json()

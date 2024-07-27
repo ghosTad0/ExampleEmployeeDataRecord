@@ -25,7 +25,9 @@ export default function AddEmployeeform(){
             alert(errMsg)
             return
         }
-        router.push("/pages/list-employees")
+        const redirectedAt = new Date()
+        const redirectParams = new URLSearchParams({redirectedAt: `${redirectedAt.getTime()}`, redirectedAfter: 'added'}).toString()
+        router.push(`/pages/list-employees?${redirectParams}`)
         return
     }
 
