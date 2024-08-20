@@ -170,6 +170,17 @@ a {
   border-radius: 0.4rem; */
 }
 
+/* .navBarMetaData {
+  justify-content: end;
+} */
+
+.appVersionStyle {
+  text-align: right;
+  color: yellowgreen;
+  padding: 1rem 1rem;
+  font-size: 1.5rem;
+}
+
 .postNvBrSpace {
   height: 10vh;
 }
