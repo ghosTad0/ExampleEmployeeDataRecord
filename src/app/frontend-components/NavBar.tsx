@@ -15,7 +15,7 @@ export default async function NavBar(props: any){
                 </div>
             </div>
             <div className="navBarMetaData">
-                <p className="appVersionStyle">ConfigDemoValue: {feConfigs.app_version}</p>
+                <p className="appVersionStyle">ConfigDemoValue: {feConfigs.config_demo_value}</p>
             </div>
         </div>
     )
