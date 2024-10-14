@@ -1,5 +1,7 @@
 import AddEmployeeform from "@/app/frontend-components/AddEmployeeForm";
 
+export const dynamic = "force-dynamic"
+
 export default function page(){
     return (
         <div>

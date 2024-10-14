@@ -1,9 +1,12 @@
 import getFrontendConfigs from "@/ssr_components/getFrontendConfigs";
+import { read } from "fs";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default async function NavBar(props: any){
     const feConfigs: any = await getFrontendConfigs()
     console.log(feConfigs)
+
     return (
         <div>
             <div className="navBar">
