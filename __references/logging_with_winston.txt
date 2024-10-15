@@ -1,0 +1,5 @@
+https://www.npmjs.com/package/winston   ---   main logging module
+
+https://github.com/winstonjs/winston-daily-rotate-file   ---  to enable log rotate using winston
+
+https://stackoverflow.com/questions/13410754/i-want-to-display-the-file-name-in-the-log-statement

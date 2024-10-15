@@ -1,3 +1,4 @@
+import apiLogger from '@/utils/extensions/apiLogger';
 import { Alert, Snackbar } from '@mui/material';
 import { useState } from 'react';
 
@@ -13,7 +14,7 @@ export default function CustomSnackbar(props: any) {
 
   const handleClose = () => {
     props.setAlert(null)
-    console.log(props.message)
+    // apiLogger.info(`Snackbar triggered: ${props.message}`)  //in snackbars these winston does not work
     setOpen(false);
   };
 

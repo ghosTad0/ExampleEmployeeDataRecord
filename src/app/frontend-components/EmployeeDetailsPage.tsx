@@ -2,6 +2,7 @@
 import CustomSnackbar from "@/app/frontend-components/CustomSnackbar";
 import EmployeeCard from "@/app/frontend-components/EmployeeCard";
 import { AddEmployeeFormType } from "@/custom_types_interfaces/add-employee-form-type";
+import apiLogger from "@/utils/extensions/apiLogger";
 import { employee } from "@prisma/client";
 import { useSearchParams } from "next/navigation";
 import React from "react";
@@ -30,7 +31,7 @@ export default function EmployeeDetailsPage(){
               return
             }
           } catch (e) {
-            console.log(`Error encountered related with redirect parameters: ${e}`)
+            // apiLogger.error(`Error encountered related with redirect parameters: ${e}`)   //frontend logs are not allowed
             return
           }
         }
@@ -46,7 +47,7 @@ export default function EmployeeDetailsPage(){
         })
         const respSendEmpDataBody = await respSendEmpData.json()
         if (respSendEmpData.status === 200){
-            console.log(respSendEmpData)
+            // apiLogger.info(`respSendEmpData: ${respSendEmpData}`)  //can't add here as well
             setEmployeesData(respSendEmpDataBody)
             return
         }
@@ -59,7 +60,6 @@ export default function EmployeeDetailsPage(){
         redirectedAlert();
     }, [])
 
-    // console.log(`This is from the list employees page   -    ${alertMsg}`)
 
     return (
         <>
