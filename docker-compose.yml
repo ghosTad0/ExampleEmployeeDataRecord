@@ -1,0 +1,14 @@
+services:
+  webapp_run:
+    container_name: emprecv1
+    image: emprecv1:0.0.2
+    environment:
+      - DATABASE_URL=mysql://user:password@172.17.0.1:3307/egdb_dev1?schema=public
+      - STATIC_SRC_DIR=/hms/data/emprecv1/static_files/static_srcs
+      - FE_CONFIGS=employee_app_fe_conf.yml
+      - LOG_PATH=/hms/logs/emprecv1
+    ports:
+      - 20001:3000
+    volumes:
+      - /home/tuan/Desktop/__temp__/static_srcs:/hms/data/emprecv1/static_files/static_srcs
+      - /home/tuan/Desktop/__temp__/__migrations:/app/node_modules/.prisma/client/migrations

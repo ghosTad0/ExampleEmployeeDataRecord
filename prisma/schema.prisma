@@ -20,6 +20,7 @@ model employee {
   employee_name               String
   employee_age                Int
   employee_designation        String
+  random_val1                 String?
 
   @@unique([employee_username])
 }
